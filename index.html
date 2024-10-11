@@ -317,8 +317,8 @@
                 <div class="column">
                     <h2>GROOMS MEN</h2>
                     <p>Remaud Lei P. Bernardo</p>
-                    <p>Dom Mounano</p>
-                    <p>Jocel Harris Abuelencia</p>
+                    <p>Don Montano</p>
+                    <p>Jocel Harris Abulencia</p>
                     <p>Alejandro S. Roman III</p>
                 </div>
             </div>
@@ -368,12 +368,16 @@
 
             <label for="contactnumber">Contact No:</label>
             <input type="text" id="contactno" name="user_number">
-
-            <input type="radio" id="attendYes" name="howmuch" value="yes">Yes, I will be there
-            <input type="radio" id="attendNo" name="howmuch" value="no">Sorry, I can't come
-
-            <br><br>
-
+            <div class="radio-container">
+                <div class="radio-row">
+                  <input type="radio" id="attendYes" name="howmuch" value="yes">
+                  <span>Yes, I will be there</span>
+                </div>
+                <div class="radio-row">
+                  <input type="radio" id="attendNo" name="howmuch" value="no">
+                  <span>Sorry, I can't come</span>
+                </div>
+            </div>
             <div class="guest" id="guestDiv">
                 <label for="event_select_for">Number of Guests:</label>
                 <select id="event_select" name="memeber_job">
