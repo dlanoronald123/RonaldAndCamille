@@ -881,7 +881,6 @@ header .member-actions {
   height: 100%;
 }
 
-
 .section-rsvp{
   font-family: var(--font-family);
   padding: 3rem;
@@ -891,13 +890,8 @@ header .member-actions {
   background-position: center; 
   background-repeat: no-repeat; 
   background-blend-mode: overlay;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  left: 0;
+  background-attachment: fixed;
   width: 100%;
-  height: 100%;
-  z-index: 0;
 }
 
 .guest, .reason {
@@ -1766,7 +1760,46 @@ body.modal-open {
   }
 }
 
+@supports (-webkit-touch-callout: none) {
+  .parallax-rsvp{
+    position: relative;
+    height: 100%;
+  }
+  
+  .section-rsvp{
+    font-family: var(--font-family);
+    padding: 3rem;
+    background-image: url("../img/burgundy.jpg");
+    background-size: cover;
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-blend-mode: overlay;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
 
+  input[type="text"]  {
+    border-radius:1rem;
+    font-size:  13px;
+    font-weight: 500;
+    height:  auto;
+    margin:  0;
+    outline:  0;
+    padding:  10px;
+    width:  100%;
+    background: transparent;
+    box-shadow:  0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom:  10px;
+    color: rgb(255, 255, 255);
+    border: 1px solid gray;
+  }
+}
   
   
 
