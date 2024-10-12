@@ -1,3 +1,28 @@
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzTCCcb8lkgbP4RO1hZKvG0yOchYRTvAB8xl_ItTJKnKYH-FWOTsPQsbfIkFM87m7OJYQ/exec';
+const form = document.getElementById('rsvpForm');
+const formResponse = document.getElementById('formResponse');
+
+  form.addEventListener('submit', (e) => {
+      e.preventDefault(); // Prevent the default form submit
+
+      // Fetch the form data
+      const formData = new FormData(form);
+
+      // Send form data to Google Sheets
+      fetch(scriptURL, { method: 'POST', body: formData })
+          .then(response => {
+              formResponse.style.display = 'block'; // Show success message
+              form.reset(); // Reset the form after successful submission
+          })
+          .catch(error => {
+              console.error('Error!', error.message);
+              formResponse.textContent = 'There was an error submitting the form.';
+              formResponse.style.display = 'block'; // Show error message
+              formResponse.style.color = 'red';
+          });
+  });
+
+
 const accordions = document.querySelectorAll(".accordion");
 
 accordions.forEach((accordion, index) => {

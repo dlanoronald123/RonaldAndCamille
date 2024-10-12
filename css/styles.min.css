@@ -893,7 +893,7 @@ h1  {
   margin:  0 0 30px 0;
   text-align:  center;
 }
-input[type="text"],  input[type="password"],  input[type="date"],  input[type="datetime"],  input[type="email"],  input[type="number"],  input[type="search"],  input[type="tel"],  input[type="time"],  input[type="url"],  textarea,  select  {
+input[type="text"]  {
   border-radius:1rem;
   font-size:  13px;
   font-weight: 500;
@@ -902,34 +902,45 @@ input[type="text"],  input[type="password"],  input[type="date"],  input[type="d
   outline:  0;
   padding:  10px;
   width:  100%;
-  background-color:  #ffffff;
+  background: transparent;
   box-shadow:  0 1px 0 rgba(0, 0, 0, 0.03) inset;
   margin-bottom:  10px;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .radio-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start; /* Aligns the items at the start */
+  align-items: flex-start; 
 }
 
 .radio-row {
   display: flex;
-  align-items: center; /* Ensures radio button and text are vertically aligned */
-  margin-bottom: 10px; /* Add space between the rows */
+  align-items: center; 
+  margin-bottom: 10px; 
 }
 
 .radio-row input {
-  margin-right: 8px; /* Add space between the radio button and the text */
+  margin-right: 8px; 
 }
 
 select  {
   padding: 10px;
   height:  50px;
   border-radius:  2px;
+  width: 420px;
+  color: black;
 }
+
+textarea  {
+  padding: 10px;
+  height:  50px;
+  border-radius:  2px;
+  width: 420px;
+  background: transparent;
+}
+
 button  {
   padding:  10px;
   color:  #FFF;
@@ -1404,6 +1415,7 @@ body.modal-open {
     margin: 5px 0;
     color: #e5ebc5;
     font-size: 9px;
+    line-height: 14px;
   }
   
   .section h3 {

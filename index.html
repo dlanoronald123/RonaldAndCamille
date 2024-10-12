@@ -358,29 +358,31 @@
     </div>
 </section>
 
-<section id="rsvp" class='section-rsvp'>
-    <form action="takeaction.php" method="post">
+<section id="rsvp" class="section-rsvp">
+    <form id="rsvpForm">
         <fieldset>
             <legend>Are You Attending?</legend>
             
             <label for="name">Name:</label>
-            <input type="text" id="name" name="user_name">
+            <input type="text" id="name" name="user_name" required>
 
             <label for="contactnumber">Contact No:</label>
-            <input type="text" id="contactno" name="user_number">
+            <input type="text" id="contactno" name="user_number" required>
+            
             <div class="radio-container">
                 <div class="radio-row">
-                  <input type="radio" id="attendYes" name="howmuch" value="yes">
-                  <span>Yes, I will be there</span>
+                    <input type="radio" id="attendYes" name="howmuch" value="yes" required>
+                    <span>Yes, I will be there</span>
                 </div>
                 <div class="radio-row">
-                  <input type="radio" id="attendNo" name="howmuch" value="no">
-                  <span>Sorry, I can't come</span>
+                    <input type="radio" id="attendNo" name="howmuch" value="no">
+                    <span>Sorry, I can't come</span>
                 </div>
             </div>
+
             <div class="guest" id="guestDiv">
                 <label for="event_select_for">Number of Guests:</label>
-                <select id="event_select" name="memeber_job">
+                <select id="event_select" name="member_job" required>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
@@ -396,11 +398,12 @@
                 <label for="bio">Any reason why you cannot attend?</label>
                 <textarea id="bio" name="user_bio"></textarea>
             </div>
-
         </fieldset>
 
         <button type="submit">Submit</button>
     </form>
+
+    <p id="formResponse" style="display:none; color:green;">Thank you! Your response has been submitted.</p>
 </section>
 <!-- 
 <section id="video-bg">
