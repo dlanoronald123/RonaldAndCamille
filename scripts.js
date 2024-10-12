@@ -1,25 +1,25 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzTCCcb8lkgbP4RO1hZKvG0yOchYRTvAB8xl_ItTJKnKYH-FWOTsPQsbfIkFM87m7OJYQ/exec';
 const form = document.getElementById('rsvpForm');
-const formResponse = document.getElementById('formResponse');
+  form.addEventListener('submit', async function(event) {
+      event.preventDefault();
 
-  form.addEventListener('submit', (e) => {
-      e.preventDefault(); // Prevent the default form submit
-
-      // Fetch the form data
       const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => (data[key] = value));
 
-      // Send form data to Google Sheets
-      fetch(scriptURL, { method: 'POST', body: formData })
-          .then(response => {
-              formResponse.style.display = 'block'; // Show success message
-              form.reset(); // Reset the form after successful submission
-          })
-          .catch(error => {
-              console.error('Error!', error.message);
-              formResponse.textContent = 'There was an error submitting the form.';
-              formResponse.style.display = 'block'; // Show error message
-              formResponse.style.color = 'red';
+      try {
+          const response = await fetch('https://script.google.com/macros/s/AKfycbx-zwf-HxhmVRS5TwqElNmX5GMWjSElwoCscLUkd5q_UUNAH_aEnN_9c06TiE8mlXqsHQ/exec', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded',
+              },
+              body: new URLSearchParams(data),
           });
+
+          const result = await response.json();
+          document.getElementById('responseMessage').textContent = result.message;
+      } catch (error) {
+          document.getElementById('responseMessage').textContent = 'An error occurred while submitting the form.';
+      }
   });
 
 
