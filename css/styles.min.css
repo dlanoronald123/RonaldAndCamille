@@ -598,9 +598,9 @@ header .member-actions {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 50vh;
+  height: auto;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin: 90px 0;
 }
 
 .ceremony-flower {
@@ -944,7 +944,21 @@ textarea  {
 button  {
   padding:  10px;
   color:  #FFF;
-  background-color: #ca3c3c;
+  background: transparent;
+  font-size:  18px;
+  text-align:  center;
+  font-style:  normal;
+  border-radius:  5px;
+  width:  30%;
+  border-width:  1px 1px 3px;
+  box-shadow:  0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  margin-bottom:  10px;
+}
+
+button:hover  {
+  padding:  10px;
+  color:  #FFF;
+  background-color: #800020;
   font-size:  18px;
   text-align:  center;
   font-style:  normal;
@@ -1310,6 +1324,10 @@ body.modal-open {
 
   @media screen and (max-width: 480px) {
 
+  .ceremony-flower {
+    margin-top: 20px;
+  }
+
   .hero-content {
     padding-top: 35%;
   }
@@ -1543,8 +1561,9 @@ body.modal-open {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 40vh;
+    height: auto;
     flex-wrap: wrap;
+    margin: 30px 0; 
   }
 
   .section img {
