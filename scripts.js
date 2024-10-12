@@ -1,26 +1,33 @@
-const form = document.getElementById('rsvpForm');
-  form.addEventListener('submit', async function(event) {
-      event.preventDefault();
+document.querySelector('form').addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-      const formData = new FormData(form);
-      const data = {};
-      formData.forEach((value, key) => (data[key] = value));
+  const formData = new FormData(e.target);
 
-      try {
-          const response = await fetch('https://script.google.com/macros/s/AKfycbx-zwf-HxhmVRS5TwqElNmX5GMWjSElwoCscLUkd5q_UUNAH_aEnN_9c06TiE8mlXqsHQ/exec', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/x-www-form-urlencoded',
-              },
-              body: new URLSearchParams(data),
-          });
+  const data = new URLSearchParams();
+  for (const pair of formData) {
+    data.append(pair[0], pair[1]);
+  }
 
-          const result = await response.json();
-          document.getElementById('responseMessage').textContent = result.message;
-      } catch (error) {
-          document.getElementById('responseMessage').textContent = 'An error occurred while submitting the form.';
+  try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbxKTDUCSUNP2gTr5C09JDOr9LMB2g5OzZB-sKgZ96selZTvap_C5MQLvAA3KPxwbhf27Q/exec', {
+          method: 'POST',
+          body: data,
+          headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+          }
+      });
+
+      if (response.ok) {
+          alert('Form submitted successfully!');
+      } else {
+          alert('Failed to submit the form');
       }
-  });
+  } catch (error) {
+      console.error('Error:', error);
+      alert('Error submitting the form');
+  }
+});
+
 
 
 const accordions = document.querySelectorAll(".accordion");
