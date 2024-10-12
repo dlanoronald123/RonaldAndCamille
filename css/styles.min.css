@@ -873,10 +873,14 @@ header .member-actions {
 }
 
 
-.parallax-container{
-  position: relative
-}
+
 /* rsvp start */
+
+.parallax-rsvp{
+  position: relative;
+  height: 100%;
+}
+
 
 .section-rsvp{
   font-family: var(--font-family);
@@ -887,9 +891,13 @@ header .member-actions {
   background-position: center; 
   background-repeat: no-repeat; 
   background-blend-mode: overlay;
-  background-attachment: fixed;
-
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .guest, .reason {
@@ -1363,7 +1371,7 @@ body.modal-open {
 
   .parallax-hero{
     position: relative;
-    height: 750px;
+    height: 700px;
   }
   
   .hero-div{
