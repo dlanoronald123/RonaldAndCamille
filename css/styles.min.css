@@ -2,7 +2,9 @@
 @import "https://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic";
 @import "https://fonts.googleapis.com/css?family=Nunito:400,300,700";
 
-
+html {
+  scroll-behavior: smooth; 
+}
 
 #top {
   background-color: rgb(255, 255, 255);
@@ -288,14 +290,35 @@ section .header {
   visibility: hidden;
   transition: all 300ms ease-in-out;
 }
+
+.parallax-hero{
+  position: relative;
+  height: 750px;
+}
+
+.hero-div{
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .hero {
   background: url("../img/hero-min3.jpg") center center;
   width: 100%;
-  height: 750px;
+  height: 100%;
   background-size: cover;
-  background-blend-mode: overlay;
-  background-attachment: fixed;
+  background-position: center center;
+  position: fixed;
+  transform: translateZ(0);
+  will-change: transform;
+  display: block;
+  top: 0;
+  left: 0;
 }
+
 .hero h1 {
   color: #fff;
   margin-bottom: 40px;
@@ -327,7 +350,6 @@ section .header {
 }
 header {
   padding: 50px 0;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
   position: relative;
   width: 1170px;
   margin: 0 auto;
@@ -850,20 +872,24 @@ header .member-actions {
   pointer-events: auto;
 }
 
+
+.parallax-container{
+  position: relative
+}
 /* rsvp start */
 
 .section-rsvp{
   font-family: var(--font-family);
+  padding: 3rem;
   background-image: url("../img/burgundy.jpg");
   background-size: cover;
-  background-blend-mode: overlay;
-  background-attachment: fixed;
   background-size: cover;
   background-position: center; 
   background-repeat: no-repeat; 
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+
   width: 100%;
-  height: auto; 
-  padding: 3rem;
 }
 
 .guest, .reason {
@@ -1013,7 +1039,7 @@ footer .to-top-wrapper {
   font-size: 30px;
   display: block;
   cursor: pointer;
-  margin: -25px auto 50px;
+  margin: -25px auto 20px;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -1164,7 +1190,6 @@ body.modal-open {
     background-size: cover;
     background-blend-mode: overlay;
     background-attachment: fixed;
-  
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat; 
@@ -1322,7 +1347,7 @@ body.modal-open {
     }
   }
 
-  @media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
 
   .ceremony-flower {
     margin-top: 20px;
@@ -1336,23 +1361,40 @@ body.modal-open {
     width: 80%;
   }
 
+  .parallax-hero{
+    position: relative;
+    height: 750px;
+  }
+  
+  .hero-div{
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
   .hero {
     background: url("../img/hero-min.jpg") center center;
     width: 100%;
-    height: 750px;
+    height: 100%;
     background-size: cover;
-    background-blend-mode: overlay;
-    background-attachment: fixed;
+    background-position: center center;
+    position: fixed;
+    transform: translateZ(0);
+    will-change: transform;
+    display: block;
+    top: 0;
+    left: 0;
   }
+
 
   .container{
     padding-left: 25px;
     padding-right: 25px;
   }
 
-  /* .section-rsvp {
-    background-attachment: scroll;
-  } */
 
   .div-ceremony {
     text-align: center;
@@ -1473,9 +1515,6 @@ body.modal-open {
     padding-top: 15px;
   }
   
-
-  
-
   section .header {
     padding-bottom: 15px;
   }
@@ -1635,7 +1674,7 @@ body.modal-open {
     transition: \transform .4s;
     transform: translateY(100%);
     z-index: 3;
-}
+  }
 
   .shape-box_half figcaption .show-cont {
     position: absolute;
@@ -1722,7 +1761,7 @@ body.modal-open {
 
   
   
-  
+
   
   
   

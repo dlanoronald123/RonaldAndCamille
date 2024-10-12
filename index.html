@@ -57,39 +57,44 @@
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body id="top">
-<section class="hero">
-    <section class="navigation">
-        <header>
-            <div class="header-content">
-                <div class="logo"><a href="#"><img src="img/logo1.png" alt="Logo"></a></div>
-                <div class="header-nav">
-                    <nav>
-                        <ul class="primary-nav">
-                            <li><a href="#intro">How we met</a></li>
-                            <li><a href="#events">Program</a></li>
-                            <li><a href="#gallery">Pictures</a></li>
-                        </ul>
-                        <ul class="member-actions">
-                            <li><a href="#rsvp" target="_blank" class="btn-white btn-small">RSVP</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="navicon">
-                    <a class="nav-toggle" href="#"><span></span></a>
+
+<div class="parallax-hero"> 
+    <div class="hero-div">
+        <section class="hero">
+            <section class="navigation">
+                <header>
+                    <div class="header-content">
+                        <div class="logo"><a href="#"><img src="img/logo1.png" alt="Logo"></a></div>
+                        <div class="header-nav">
+                            <nav>
+                                <ul class="primary-nav">
+                                    <li><a href="#intro">How we met</a></li>
+                                    <li><a href="#events">Program</a></li>
+                                    <li><a href="#gallery">Pictures</a></li>
+                                </ul>
+                                <ul class="member-actions">
+                                    <li><a href="#rsvp" target="_blank" class="btn-white btn-small">RSVP</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="navicon">
+                            <a class="nav-toggle" href="#"><span></span></a>
+                        </div>
+                    </div>
+                </header>
+            </section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md">
+                        <div class="hero-content text-center">
+                            <img alt="hero" src="img/logo-lg.png">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </header>
-    </section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md">
-                <div class="hero-content text-center">
-                    <img alt="hero" src="img/logo-lg.png">
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
-</section>
+</div>
 
 <section id="invitation" class="section-padding">
     <div class="container">
@@ -129,7 +134,7 @@
     </div>
 </section>
 
-<section id="#events" class="wedding-container">
+<section id="events" class="wedding-container">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center mt-6">
@@ -352,68 +357,70 @@
     </div>
 </section>
 
-<section id="rsvp" class="section-rsvp">
-    <form id="form">
-        <fieldset>
-            <legend>Are You Attending?</legend>
-            
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="Name" required>
+<div class="parallax-container">
+    <section id="rsvp" class="section-rsvp">
+        <form id="form">
+            <fieldset>
+                <legend>Are You Attending?</legend>
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="Name" required>
 
-            <label for="contactnumber">Contact No:</label>
-            <input type="text" id="contactno" name="Contact" max="11" required>
-            
-            <div class="radio-container">
-                <div class="radio-row">
-                    <input type="radio" id="attendYes" name="Attendance" value="yes" required>
-                    <span>Yes, I will be there</span>
+                <label for="contactnumber">Contact No:</label>
+                <input type="text" id="contactno" name="Contact" max="11" required>
+                
+                <div class="radio-container">
+                    <div class="radio-row">
+                        <input type="radio" id="attendYes" name="Attendance" value="yes" required>
+                        <span>Yes, I will be there</span>
+                    </div>
+                    <div class="radio-row">
+                        <input type="radio" id="attendNo" name="Attendance" value="no">
+                        <span>Sorry, I can't come</span>
+                    </div>
                 </div>
-                <div class="radio-row">
-                    <input type="radio" id="attendNo" name="Attendance" value="no">
-                    <span>Sorry, I can't come</span>
+
+                <div class="guest" id="guestDiv">
+                    <label for="event_select_for">Number of Guests:</label>
+                    <select id="event_select" name="Guests">
+                        <option value="" selected disabled>Only me</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                        <option value="5">Five</option>
+                        <option value="6">Six</option>
+                        <option value="7">Seven</option>
+                        <option value="8">Eight</option>
+                    </select>
                 </div>
-            </div>
 
-            <div class="guest" id="guestDiv">
-                <label for="event_select_for">Number of Guests:</label>
-                <select id="event_select" name="Guests">
-                    <option value="" selected disabled>Only me</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-                    <option value="6">Six</option>
-                    <option value="7">Seven</option>
-                    <option value="8">Eight</option>
-                </select>
-            </div>
+                <div class="reason" id="reasonDiv">
+                    <label for="bio">Any reason why you cannot attend?</label>
+                    <textarea id="bio" name="Reason"></textarea>
+                </div>
+            </fieldset>
 
-            <div class="reason" id="reasonDiv">
-                <label for="bio">Any reason why you cannot attend?</label>
-                <textarea id="bio" name="Reason"></textarea>
-            </div>
-        </fieldset>
+            <button id="submit-button" type="submit">Submit</button>
+            <div
+                id="message"
+                style="
+                display: none;
+                margin-top: 5px;
+                font-weight: bold;
+                color: rgb(1, 71, 1);
+                padding: 8px;
+                background-color: beige;
+                border-radius: 4px;
+                border-color: aquamarine;
+                width: 210px;
+                "
+            ></div>
+        </form>
 
-        <button id="submit-button" type="submit">Submit</button>
-        <div
-            id="message"
-            style="
-            display: none;
-            margin-top: 5px;
-            font-weight: bold;
-            color: rgb(1, 71, 1);
-            padding: 8px;
-            background-color: beige;
-            border-radius: 4px;
-            border-color: aquamarine;
-            width: 210px;
-            "
-        ></div>
-    </form>
-
-    
-</section>
+        
+    </section>
+</div>
 
 
 <footer>
