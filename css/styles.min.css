@@ -1,19 +1,21 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800";
 @import "https://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic";
 @import "https://fonts.googleapis.com/css?family=Nunito:400,300,700";
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap');
 
 html {
   scroll-behavior: smooth; 
 }
 
 #top {
-  background-color: rgb(182, 182, 182);
+  /* background-color: rgb(182, 182, 182); 
   /* background: #282537;
   background-image: -webkit-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
   background-image: -moz-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
   background-image: -o-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
   background-image: radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%); */
   font-family: var(--font-family);
+  background-color: white;
 
 }
 
@@ -124,7 +126,6 @@ section.features-extra {
 }
 .col-md-3 {
   width: 25%;
-  padding-top: 77px;
 }
 
 .group:after {
@@ -208,11 +209,13 @@ section .header {
     transform: translate(-50%, 0);
   }
 }
-
-.wp8,
-.wp9 {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
+.nuptials{
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 400;
+  font-size: 50px;
+  color: #e5ebc5;
+  font-style: normal;
+  line-height: 45px;
 }
 
 .header-nav.open {
@@ -825,11 +828,25 @@ header .member-actions {
 
 .flex-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 .flex-container .column {
   width: 45%;
 }
+
+.left-wing {
+  text-align: right;
+}
+
+.right-wing {
+  text-align: left;
+}
+
+.bearers{
+  font-style: italic;
+  padding-right: 5px;
+}
+
 .flower {
   position: absolute;
   bottom: 10px;
@@ -1502,6 +1519,15 @@ footer span.fa-heart {
   }
 
 @media screen and (max-width: 480px) {
+
+  .nuptials{
+    font-family: "Qwitcher Grypen", cursive;
+    font-weight: 400;
+    font-size: 25px;
+    color: #e5ebc5;
+    font-style: normal;
+    line-height: 15px;
+  }
 
   .ceremony-flower {
     margin-top: 20px;
