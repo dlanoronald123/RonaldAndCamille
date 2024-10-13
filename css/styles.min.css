@@ -8,14 +8,13 @@ html {
 }
 
 #top {
-  /* background-color: rgb(182, 182, 182); 
-  /* background: #282537;
-  background-image: -webkit-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
-  background-image: -moz-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
-  background-image: -o-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
-  background-image: radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%); */
+  /* background-image: -webkit-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%); */
+  /* background-image: -moz-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%); */
+  /* background-image: -o-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%); */
+  /* background-image: radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);  */
+  background-color: rgb(182, 182, 182); 
   font-family: var(--font-family);
-  background-color: white;
+  /* background-color: white; */
 
 }
 
@@ -212,11 +211,21 @@ section .header {
 .nuptials{
   font-family: "Qwitcher Grypen", cursive;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 80px;
   color: #e5ebc5;
   font-style: normal;
   line-height: 45px;
 }
+.nup-word{
+  font-size: 2rem;
+  margin: 5px 0;
+  line-height: 20px;
+  letter-spacing: 3px;
+  color: #e5ebc5;
+  margin-bottom: 30px;
+}
+
+
 
 .header-nav.open {
   visibility: visible;
@@ -793,13 +802,13 @@ header .member-actions {
 }
 
 .section h2 {
-  margin: 10px 0;
+  /* margin: 10px 0; */
   color: #e5ebc5;
   font-size: 1.5rem;
 }
 
 .section h3 {
-  margin: 10px 0;
+  margin: 3px 0;
   color: #e5ebc5;
   font-size: 1.5rem;
 }
@@ -826,6 +835,14 @@ header .member-actions {
   line-height: 25px;
 }
 
+.flex-cont{
+  display: flex;
+  justify-content: space-evenly;
+}
+.mimi{
+  margin-left: 45px;
+}
+
 .flex-container {
   display: flex;
   justify-content: space-between;
@@ -844,7 +861,7 @@ header .member-actions {
 
 .bearers{
   font-style: italic;
-  padding-right: 5px;
+  padding-left: 13px;
 }
 
 .flower {
@@ -1520,10 +1537,19 @@ footer span.fa-heart {
 
 @media screen and (max-width: 480px) {
 
+  .nup-word{
+    font-size: 1.23rem;
+    margin: 5px 0;
+    line-height: 20px;
+    letter-spacing: 3px;
+    color: #e5ebc5;
+    margin-bottom: 15px;
+  }
+
   .nuptials{
     font-family: "Qwitcher Grypen", cursive;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 43px;
     color: #e5ebc5;
     font-style: normal;
     line-height: 15px;
@@ -1644,7 +1670,7 @@ footer span.fa-heart {
     border-radius: 2.5rem;
     width: 100%;
     max-width: 75rem;
-    padding: 2rem;
+    padding: 3rem 2rem 1rem 2rem;
   }
   
   .section {
