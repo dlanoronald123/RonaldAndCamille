@@ -172,6 +172,10 @@ section .header {
 }
 .section-border {
   border-bottom: 1px solid #e6e9ea;
+  display: flex;
+  justify-content: center;
+  width: 75rem;
+  margin-left: 20rem;
 }
 
 .pulse2 {
@@ -641,6 +645,7 @@ header .member-actions {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40rem;
 }
 
 .ceremony-flower img {
@@ -1230,9 +1235,9 @@ footer span.fa-heart {
   background-color: #fff;
   /*front end layout and positioning*/
   margin: 15% auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
-  width: 80%;
+  width: 90%;
   max-width: 620px;
   /*front end design and animation*/
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -1536,6 +1541,16 @@ footer span.fa-heart {
   }
 
 @media screen and (max-width: 480px) {
+
+  .section-border {
+    border-bottom: 1px solid #e6e9ea;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin-left: 0;
+  }
+
+  
 
   .nup-word{
     font-size: 1.23rem;
