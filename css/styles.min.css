@@ -18,6 +18,14 @@ html {
 
 }
 
+.main-title{
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 400;
+  color: #800020;
+  font-size: 12rem;
+  margin: 0;
+}
+
 p {
   font-size: 15px;
   font-weight: 500;
@@ -403,7 +411,7 @@ header ul.primary-nav li a {
   padding-right: 25px;
 }
 header ul.primary-nav li a:hover {
-  color: #e8ca6f;
+  color: #800020;
 }
 header ul.primary-nav li:last-child a {
   padding-right: 0px;
@@ -633,6 +641,10 @@ header .member-actions {
   color: #800020;
 }
 
+#ceremony-text-main:hover{
+  color: #800020;
+}
+
 #ceremony-text:hover{
   color: #800020;
 }
@@ -668,7 +680,7 @@ header .member-actions {
 
 .div-reception {
   text-align: center;
-  margin: 0 80px 0 0;
+  margin: 0 125px 0 0;
 }
 
 .animate-on-scroll {
@@ -842,12 +854,19 @@ header .member-actions {
 
 }
 
-
-#ceremony-text {
+#ceremony-text-main {
   margin: 5px 0;
   color: black;
   line-height: 25px;
   font-size: 20px;
+  font-weight: bold;
+}
+
+#ceremony-text {
+  margin: 5px 0;
+  color: #3d4351;
+  line-height: 25px;
+  font-size: 18px;
 }
 
 .flex-cont{
@@ -1552,6 +1571,23 @@ footer span.fa-heart {
 
 @media screen and (max-width: 480px) {
 
+  .main-title{
+    font-family: "Qwitcher Grypen", cursive;
+    font-weight: 400;
+    color: #800020;
+    font-size: 8rem;
+    margin: 0;
+  }
+
+
+  #ceremony-text-main {
+    margin: 5px 0;
+    color: black;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
   .section-border {
     border-bottom: 1px solid #e6e9ea;
     display: flex;
@@ -1732,14 +1768,14 @@ footer span.fa-heart {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3px;
-    line-height: 29px
+    line-height: 10px
   }
   
   #ceremony-text {
     margin: 5px 0;
     font-size: 15px;
     line-height: 12px;
-    color: black;
+    color: rgba(1, 7, 15);  
   }
 
   .carousel-container{
