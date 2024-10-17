@@ -144,7 +144,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #d3b56a;
+  color: #800020;
   text-decoration: none;
 }
 body {
@@ -628,6 +628,15 @@ header .member-actions {
 }
 
 /* ceremony-reception */
+
+#ceremony-title:hover{
+  color: #800020;
+}
+
+#ceremony-text:hover{
+  color: #800020;
+}
+
 .section-ceremony {
   margin: 0;
   color: #3e3e3e;
@@ -654,12 +663,12 @@ header .member-actions {
 
 .div-ceremony {
   text-align: center;
-  margin: 0 0 0 190px;
+  margin: 0 0 0 140px;
 }
 
 .div-reception {
   text-align: center;
-  margin: 0 130px 0 0;
+  margin: 0 80px 0 0;
 }
 
 .animate-on-scroll {
@@ -838,6 +847,7 @@ header .member-actions {
   margin: 5px 0;
   color: black;
   line-height: 25px;
+  font-size: 20px;
 }
 
 .flex-cont{
@@ -1727,7 +1737,7 @@ footer span.fa-heart {
   
   #ceremony-text {
     margin: 5px 0;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 12px;
     color: black;
   }
