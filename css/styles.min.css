@@ -1152,8 +1152,13 @@ footer span.fa-heart {
 }
 
 .gifts-text{
-font-size: 20px;
+font-size: 18px;
 line-height: 18px;
+}
+
+.gifts-text-env{
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .gifts-title{
@@ -1609,7 +1614,7 @@ line-height: 18px;
   .gifts-text-env{
     font-size: 17px;
     line-height: 20px;
-    }
+  }
   
   .gifts-title{
     font-size: 60px;
