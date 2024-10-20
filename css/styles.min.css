@@ -1144,6 +1144,26 @@ footer span.fa-heart {
   margin-top:40px
 }
 
+.gifts-section{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gifts-text{
+font-size: 20px;
+line-height: 18px;
+}
+
+.gifts-title{
+  font-size: 70px;
+  line-height: 50px;
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
 .buttonBox{
   margin: 0 20px 40px;
   position:relative;
@@ -1571,6 +1591,33 @@ footer span.fa-heart {
   }
 
 @media screen and (max-width: 480px) {
+
+  .gifts-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px;
+    text-align: center;
+  }
+  
+  .gifts-text{
+  font-size: 15px;
+  line-height: 20px;
+  }
+
+  .gifts-text-env{
+    font-size: 17px;
+    line-height: 20px;
+    }
+  
+  .gifts-title{
+    font-size: 60px;
+    line-height: 50px;
+    font-family: "Qwitcher Grypen", cursive;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
 
   .main-title{
     font-family: "Qwitcher Grypen", cursive;
