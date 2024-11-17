@@ -1072,6 +1072,9 @@ fieldset  {
   margin-bottom:  10px;
   border:  none;
 }
+.rsvp-note{
+  padding-top: 70px;
+}
 .rsvsp-note{
   font-size: 1.5rem;
   font-weight: var(--fw-bold);
@@ -1757,6 +1760,10 @@ line-height: 18px;
     width: 100%;
     max-width: 50rem;
     padding: 3.3rem;
+  }
+
+  .rsvp-note{
+    padding-top: 70px;
   }
 
   .rsvsp-note{
