@@ -398,7 +398,54 @@
 <div class="parallax-rsvp" id="rsvp">
     <div class="rsvp-div">
         <section id="rsvp" class="section-rsvp">
-            <legend>Please note that the RSVP for this event is now closed. Thank you for your understanding!</legend>
+            <form id="form">
+                <fieldset>
+                    <legend>Are You Attending?</legend>
+                    
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="Name" required>
+
+                    <label for="contactnumber">Contact No:</label>
+                    <input type="text" id="contactno" name="Contact" max="11" required>
+                    
+                    <div class="radio-container">
+                        <div class="radio-row">
+                            <input type="radio" id="attendYes" name="Attendance" value="yes" required>
+                            <span>Yes, I will be there</span>
+                        </div>
+                        <div class="radio-row">
+                            <input type="radio" id="attendNo" name="Attendance" value="no">
+                            <span>Sorry, I can't come</span>
+                        </div>
+                    </div>
+
+                    <div class="guest" id="guestDiv">
+                        <label for="event_select_for">Please write the names of those attending based on the number of guests indicated on your invitation:</label>
+                        <textarea id="bio" name="Guest"></textarea>
+                    </div>
+
+                    <div class="reason" id="reasonDiv">
+                        <label for="bio">Any reason why you cannot attend?</label>
+                        <textarea id="bio" name="Reason"></textarea>
+                    </div>
+                </fieldset>
+
+                <button class="button-form" id="submit-button" type="submit">Submit</button>
+                <div
+                    id="message"
+                    style="
+                    display: none;
+                    margin-top: 5px;
+                    font-weight: bold;
+                    color: rgb(1, 71, 1);
+                    padding: 8px;
+                    background-color: beige;
+                    border-radius: 4px;
+                    border-color: aquamarine;
+                    width: 210px;
+                    "
+                ></div>
+            </form>
         </section>
     </div>
 </div>
